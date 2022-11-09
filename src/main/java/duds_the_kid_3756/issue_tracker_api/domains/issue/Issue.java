@@ -1,12 +1,12 @@
 package duds_the_kid_3756.issue_tracker_api.domains.issue;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import duds_the_kid_3756.issue_tracker_api.domains.reminder.Reminder;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "issue")
 public class Issue {
 
     @Id
@@ -19,28 +19,38 @@ public class Issue {
 
     private String created;
 
-    private boolean isCompleted;
+    private String color = "#000000";
 
-    private boolean hasReminder;
+    private boolean isCompleted = false;
+
+    private boolean hasReminder = false;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "reminder_id", referencedColumnName = "id")
+    private Reminder reminder;
 
     public Issue() {
     }
 
-    public Issue(Long id, String title, String comment, String created, boolean isCompleted, boolean hasReminder) {
+    public Issue(Long id, String title, String comment, String created, String color, boolean isCompleted, boolean hasReminder, Reminder reminder) {
         this.id = id;
         this.title = title;
         this.comment = comment;
         this.created = created;
+        this.color = color;
         this.isCompleted = isCompleted;
         this.hasReminder = hasReminder;
+        this.reminder = reminder;
     }
 
-    public Issue(String title, String comment, String created, boolean isCompleted, boolean hasReminder) {
+    public Issue(String title, String comment, String created, String color, boolean isCompleted, boolean hasReminder, Reminder reminder) {
         this.title = title;
         this.comment = comment;
         this.created = created;
+        this.color = color;
         this.isCompleted = isCompleted;
         this.hasReminder = hasReminder;
+        this.reminder = reminder;
     }
 
     public Long getId() {
@@ -75,12 +85,20 @@ public class Issue {
         this.created = created;
     }
 
-    public boolean isCompleted() {
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isIsCompleted() {
         return isCompleted;
     }
 
-    public void setCompleted(boolean completed) {
-        isCompleted = completed;
+    public void setCompleted(boolean isCompleted) {
+        this.isCompleted = isCompleted;
     }
 
     public boolean isHasReminder() {
@@ -91,16 +109,24 @@ public class Issue {
         this.hasReminder = hasReminder;
     }
 
+    public Reminder getReminder() {
+        return reminder;
+    }
+
+    public void setReminder(Reminder reminder) {
+        this.reminder = reminder;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Issue issue)) return false;
-        return isCompleted() == issue.isCompleted() && isHasReminder() == issue.isHasReminder() && getId().equals(issue.getId()) && getTitle().equals(issue.getTitle()) && getComment().equals(issue.getComment()) && getCreated().equals(issue.getCreated());
+        return isCompleted == issue.isCompleted && isHasReminder() == issue.isHasReminder() && getId().equals(issue.getId()) && getTitle().equals(issue.getTitle()) && getComment().equals(issue.getComment()) && Objects.equals(getCreated(), issue.getCreated()) && Objects.equals(getColor(), issue.getColor()) && Objects.equals(getReminder(), issue.getReminder());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getComment(), getCreated(), isCompleted(), isHasReminder());
+        return Objects.hash(getId(), getTitle(), getComment(), getCreated(), getColor(), isCompleted, isHasReminder(), getReminder());
     }
 
     @Override
@@ -110,8 +136,10 @@ public class Issue {
                 ", title='" + title + '\'' +
                 ", comment='" + comment + '\'' +
                 ", created='" + created + '\'' +
+                ", color='" + color + '\'' +
                 ", isCompleted=" + isCompleted +
                 ", hasReminder=" + hasReminder +
+                ", reminder=" + reminder +
                 '}';
     }
 }

@@ -12,8 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.util.Date;
 import java.util.List;
 
-import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.NOT_FOUND;
-import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.SERVER_ERROR;
+import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.*;
 
 @ControllerAdvice
 public class ExceptionController {
@@ -31,6 +30,13 @@ public class ExceptionController {
         ExceptionResponse response =
                 new ExceptionResponse(SERVER_ERROR, new Date(), exception.getMessage());
         return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(Invalid.class)
+    protected ResponseEntity<ExceptionResponse> invalid(Invalid exception) {
+        ExceptionResponse response =
+                new ExceptionResponse(BAD_REQUEST, new Date(), exception.getMessage());
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
     private String parseMessage(MethodArgumentNotValidException ex) {
