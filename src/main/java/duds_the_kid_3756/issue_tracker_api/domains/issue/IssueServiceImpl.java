@@ -65,17 +65,23 @@ public class IssueServiceImpl implements IssueService {
     public Issue addIssue(Issue issue) {
         var reminder = issue.getReminder();
         issue.setCreated(PLACEHOLDER);
+        var message = "";
         var errors = "";
-        if (!issue.isHasReminder()) {
+        var isNull = reminder == null;
 
-            if (reminder == null) {
+        if (issue.isHasReminder()) {
+            if (isNull) {
                 errors += String.format("Reminder%s", NULL);
-            } else {
-                var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
-                if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
-                    errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
-                }
+                logger.error(errors);
+                throw new Invalid(errors);
             }
+            var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
+            if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
+                errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
+            }
+        } else {
+            reminder = null;
+            message = "Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder";
         }
 
         issue.setReminder(PLACEHOLDER_REMINDER);
@@ -98,7 +104,7 @@ public class IssueServiceImpl implements IssueService {
         issue.setReminder(reminder);
         issue.setCreated(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
         try {
-            logger.info("New issue added");
+            logger.info(message.isBlank() ? "New issue added" : message);
             return issueRepository.save(issue);
         } catch (DataAccessException dae) {
             logger.error(dae.getMessage());

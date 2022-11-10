@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static duds_the_kid_3756.issue_tracker_api.constants.Regex.ALPHANUMERIC;
-import static duds_the_kid_3756.issue_tracker_api.constants.Regex.HEXCODE;
+import static duds_the_kid_3756.issue_tracker_api.constants.Regex.HEX_CODE;
 import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.INVALID;
 import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.NULL;
 
@@ -45,7 +45,7 @@ public class Validation {
     }
 
     public static String checkHexCode(String hexCode) {
-        var match = hexCode.matches(HEXCODE);
+        var match = hexCode.matches(HEX_CODE);
         if (!match || hexCode.startsWith(" ")) return "Color is not valid hex code. ";
         return "";
     }
