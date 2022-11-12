@@ -9,7 +9,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -35,7 +37,7 @@ public class IssueServiceImpl implements IssueService {
     public List<Issue> getIssues() {
         try {
             logger.info("Got all issues");
-            return issueRepository.findAll();
+            return issueRepository.findAll().stream().toList();
         } catch (DataAccessException dae) {
             logger.error(dae.getMessage());
             throw new ServerError(dae.getMessage());
@@ -103,9 +105,33 @@ public class IssueServiceImpl implements IssueService {
 
         issue.setReminder(reminder);
         issue.setCreated(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+
         try {
             logger.info(message.isBlank() ? "New issue added" : message);
             return issueRepository.save(issue);
+        } catch (DataAccessException dae) {
+            logger.error(dae.getMessage());
+            throw new ServerError(dae.getMessage());
+        }
+    }
+
+    @Override
+    public Issue updateIssue(Issue issue, Long id) {
+        try {
+            logger.info(String.format("Issue with id %s updated", id));
+            return issueRepository.save(issue);
+        } catch (DataAccessException dae) {
+            logger.error(dae.getMessage());
+            throw new ServerError(dae.getMessage());
+        }
+    }
+
+    @Override
+    public void deleteIssue(Long id) {
+        try {
+            issueRepository.deleteById(id);
+            logger.info(String.format("Issue with id %s deleted", id));
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
         } catch (DataAccessException dae) {
             logger.error(dae.getMessage());
             throw new ServerError(dae.getMessage());

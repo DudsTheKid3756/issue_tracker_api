@@ -1,5 +1,6 @@
 package duds_the_kid_3756.issue_tracker_api.domains.reminder;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import duds_the_kid_3756.issue_tracker_api.domains.issue.Issue;
 
 import javax.persistence.*;
@@ -22,25 +23,20 @@ public class Reminder {
 
     private String alert;
 
-    @OneToOne(mappedBy = "reminder")
-    private Issue issue;
-
     public Reminder() {
     }
 
-    public Reminder(Long id, LocalTime time, LocalDate date, String alert, Issue issue) {
+    public Reminder(Long id, LocalTime time, LocalDate date, String alert) {
         this.id = id;
         this.time = time;
         this.date = date;
         this.alert = alert;
-        this.issue = issue;
     }
 
-    public Reminder(LocalTime time, LocalDate date, String alert, Issue issue) {
+    public Reminder(LocalTime time, LocalDate date, String alert) {
         this.time = time;
         this.date = date;
         this.alert = alert;
-        this.issue = issue;
     }
 
     public Long getId() {
@@ -75,24 +71,16 @@ public class Reminder {
         this.alert = alert;
     }
 
-    public Issue getIssue() {
-        return issue;
-    }
-
-    public void setIssue(Issue issue) {
-        this.issue = issue;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Reminder reminder)) return false;
-        return Objects.equals(getId(), reminder.getId()) && Objects.equals(getTime(), reminder.getTime()) && Objects.equals(getDate(), reminder.getDate()) && Objects.equals(getAlert(), reminder.getAlert()) && Objects.equals(getIssue(), reminder.getIssue());
+        return Objects.equals(getId(), reminder.getId()) && Objects.equals(getTime(), reminder.getTime()) && Objects.equals(getDate(), reminder.getDate()) && Objects.equals(getAlert(), reminder.getAlert());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTime(), getDate(), getAlert(), getIssue());
+        return Objects.hash(getId(), getTime(), getDate(), getAlert());
     }
 
     @Override
@@ -102,7 +90,6 @@ public class Reminder {
                 ", time=" + time +
                 ", date=" + date +
                 ", alert='" + alert + '\'' +
-                ", issue=" + issue +
                 '}';
     }
 }

@@ -9,4 +9,8 @@ public interface IssueService {
     Issue getIssueById(Long id);
 
     Issue addIssue(Issue issue);
+
+    Issue updateIssue(Issue issue, Long id);
+
+    void deleteIssue(Long id);
 }

@@ -16,7 +16,6 @@ import static duds_the_kid_3756.issue_tracker_api.constants.Paths.BASE_PATH;
 public class IssueController {
 
     private final Logger logger = LogManager.getLogger(IssueController.class);
-
     @Autowired
     private final IssueService issueService;
 
@@ -40,5 +39,18 @@ public class IssueController {
     public ResponseEntity<Issue> addIssue(@RequestBody Issue issue) {
         logger.info("Request received for addIssue");
         return new ResponseEntity<>(issueService.addIssue(issue), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Issue> updateIssue(@RequestBody Issue issue, @PathVariable Long id) {
+        logger.info(String.format("Request received for updateIssue %s", id));
+        return new ResponseEntity<>(issueService.updateIssue(issue, id), HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Issue> deleteIssue(@PathVariable Long id) {
+        logger.info(String.format("Request received for deleteIssue %s", id));
+        issueService.deleteIssue(id);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
