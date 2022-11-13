@@ -1,8 +1,5 @@
 package duds_the_kid_3756.issue_tracker_api.domains.reminder;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import duds_the_kid_3756.issue_tracker_api.domains.issue.Issue;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;

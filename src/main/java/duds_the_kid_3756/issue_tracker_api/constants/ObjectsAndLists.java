@@ -17,8 +17,7 @@ public class ObjectsAndLists {
                     -1L,
                     new Time(0L).toLocalTime(),
                     new Date(1600 - 1 - 1).toLocalDate(),
-                    PLACEHOLDER,
-                    -1L);
+                    PLACEHOLDER);
 
     public static final List<String> ALERT_OPTIONS =
             new ArrayList<>(

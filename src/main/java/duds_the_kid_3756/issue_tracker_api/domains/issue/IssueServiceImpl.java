@@ -55,7 +55,7 @@ public class IssueServiceImpl implements IssueService {
         }
 
         if (issue == null) {
-            logger.error(String.format(DOES_NOT_EXIST, id));
+            logger.error(String.format("Issue%s", String.format(DOES_NOT_EXIST, id)));
             throw new ResourceNotFound(String.format("Issue%s", String.format(DOES_NOT_EXIST, id)));
         }
 
@@ -69,10 +69,9 @@ public class IssueServiceImpl implements IssueService {
         issue.setCreated(PLACEHOLDER);
         var message = "";
         var errors = "";
-        var isNull = reminder == null;
 
         if (issue.isHasReminder()) {
-            if (isNull) {
+            if (reminder == null) {
                 errors += String.format("Reminder%s", NULL);
                 logger.error(errors);
                 throw new Invalid(errors);
@@ -117,8 +116,66 @@ public class IssueServiceImpl implements IssueService {
 
     @Override
     public Issue updateIssue(Issue issue, Long id) {
+        var reminder = issue.getReminder();
+        Issue existingIssue;
         try {
-            logger.info(String.format("Issue with id %s updated", id));
+            existingIssue = issueRepository.findById(id).orElse(null);
+        } catch (DataAccessException dae) {
+            logger.error(dae.getMessage());
+            throw new ServerError(dae.getMessage());
+        }
+
+        if (existingIssue == null) {
+            logger.error(String.format("Issue%s", String.format(DOES_NOT_EXIST, id)));
+            throw new ResourceNotFound(String.format("Issue%s", String.format(DOES_NOT_EXIST, id)));
+        }
+
+        issue.setCreated(PLACEHOLDER);
+        var errors = "";
+        var message = "";
+
+        if (issue.isHasReminder()) {
+            if (reminder == null) {
+                errors += String.format("Reminder%s", NULL);
+                logger.error(errors);
+                throw new Invalid(errors);
+            }
+            var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
+            if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
+                errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
+            }
+        } else {
+            message = "'hasReminder' field was false. Reminder was set to null";
+        }
+
+        issue.setReminder(PLACEHOLDER_REMINDER);
+        issue.setColor(issue.getColor().substring(1));
+
+        try {
+            errors += Validation.getErrors(issue);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
+
+        issue.setColor(String.format("#%s", issue.getColor()));
+        errors += Validation.checkHexCode(issue.getColor());
+
+        if (errors.length() != 0) {
+            logger.error(errors);
+            throw new Invalid(errors);
+        }
+
+        issue.setCreated(existingIssue.getCreated());
+
+        if (issue.getId() == null) {
+            issue.setId(id);
+        }
+
+        issue.setReminder(issue.isHasReminder() ? reminder : null);
+        issue.getReminder().setId(existingIssue.getReminder().getId());
+
+        try {
+            logger.info(String.format("Issue with id %s updated. %s", id, message));
             return issueRepository.save(issue);
         } catch (DataAccessException dae) {
             logger.error(dae.getMessage());
