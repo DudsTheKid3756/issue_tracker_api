@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
@@ -76,6 +77,7 @@ public class IssueServiceImpl implements IssueService {
                 logger.error(errors);
                 throw new Invalid(errors);
             }
+
             var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
             if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
                 errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
@@ -103,7 +105,12 @@ public class IssueServiceImpl implements IssueService {
         }
 
         issue.setReminder(reminder);
-        issue.setCreated(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
+        issue.setCreated(
+                LocalDateTime.now()
+                        .format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
+                        .substring(0, 16)
+                        .replace("T", " ")
+        );
 
         try {
             logger.info(message.isBlank() ? "New issue added" : message);
@@ -140,6 +147,7 @@ public class IssueServiceImpl implements IssueService {
                 logger.error(errors);
                 throw new Invalid(errors);
             }
+
             var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
             if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
                 errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
