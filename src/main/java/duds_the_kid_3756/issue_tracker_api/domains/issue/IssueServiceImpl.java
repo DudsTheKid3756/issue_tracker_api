@@ -180,7 +180,9 @@ public class IssueServiceImpl implements IssueService {
         }
 
         issue.setReminder(issue.isHasReminder() ? reminder : null);
-        issue.getReminder().setId(existingIssue.getReminder().getId());
+        if (issue.getReminder() != null){
+            issue.getReminder().setId(existingIssue.getReminder().getId());
+        }
 
         try {
             logger.info(String.format("Issue with id %s updated. %s", id, message));
