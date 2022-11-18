@@ -3,7 +3,6 @@ package duds_the_kid_3756.issue_tracker_api.domains.issue;
 import duds_the_kid_3756.issue_tracker_api.exceptions.Invalid;
 import duds_the_kid_3756.issue_tracker_api.exceptions.ResourceNotFound;
 import duds_the_kid_3756.issue_tracker_api.exceptions.ServerError;
-import duds_the_kid_3756.issue_tracker_api.helpers.ListFormatter;
 import duds_the_kid_3756.issue_tracker_api.helpers.Validation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,14 +12,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 import static duds_the_kid_3756.issue_tracker_api.constants.ObjectsAndLists.ALERT_OPTIONS;
 import static duds_the_kid_3756.issue_tracker_api.constants.ObjectsAndLists.PLACEHOLDER_REMINDER;
 import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.*;
+import static duds_the_kid_3756.issue_tracker_api.helpers.Formatters.DateFormatter;
+import static duds_the_kid_3756.issue_tracker_api.helpers.Formatters.ListFormatter;
 
 @Service
 public class IssueServiceImpl implements IssueService {
@@ -78,7 +78,7 @@ public class IssueServiceImpl implements IssueService {
                 throw new Invalid(errors);
             }
 
-            var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
+            var formattedOptions = ListFormatter(ALERT_OPTIONS);
             if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
                 errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
             }
@@ -105,12 +105,7 @@ public class IssueServiceImpl implements IssueService {
         }
 
         issue.setReminder(reminder);
-        issue.setCreated(
-                LocalDateTime.now()
-                        .format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
-                        .substring(0, 16)
-                        .replace("T", " ")
-        );
+        issue.setCreated(DateFormatter(LocalDate.now(), LocalTime.now()));
 
         try {
             logger.info(message.isBlank() ? "New issue added" : message);
@@ -148,7 +143,7 @@ public class IssueServiceImpl implements IssueService {
                 throw new Invalid(errors);
             }
 
-            var formattedOptions = ListFormatter.Formatter(ALERT_OPTIONS);
+            var formattedOptions = ListFormatter(ALERT_OPTIONS);
             if (!ALERT_OPTIONS.contains(reminder.getAlert())) {
                 errors += String.format("Alert%sTry%s", INVALID, formattedOptions);
             }
@@ -180,7 +175,7 @@ public class IssueServiceImpl implements IssueService {
         }
 
         issue.setReminder(issue.isHasReminder() ? reminder : null);
-        if (issue.getReminder() != null){
+        if (issue.getReminder() != null) {
             issue.getReminder().setId(existingIssue.getReminder().getId());
         }
 
