@@ -6,6 +6,9 @@ import org.springframework.http.HttpMethod;
 import org.springframework.lang.NonNull;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -17,6 +20,16 @@ import java.util.Arrays;
 
 @Configuration
 public class WebSecurity {
+
+    @Bean
+    public InMemoryUserDetailsManager userDetailsService() {
+        UserDetails user = User.withDefaultPasswordEncoder()
+                .username("duds_the_kid_3756")
+                .password("DudsTheKid3756$")
+                .roles("USER")
+                .build();
+        return new InMemoryUserDetailsManager(user);
+    }
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
