@@ -38,7 +38,7 @@ public class IssueServiceImpl implements IssueService {
     public List<Issue> getIssues() {
         try {
             logger.info("Got all issues");
-            return issueRepository.findAll().stream().toList();
+            return issueRepository.findAll();
         } catch (DataAccessException dae) {
             logger.error(dae.getMessage());
             throw new ServerError(dae.getMessage());
