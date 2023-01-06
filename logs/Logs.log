@@ -1,33 +1,49 @@
-2023-01-03 12:46:15,852 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 57712 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
-2023-01-03 12:46:15,887 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
-2023-01-03 12:46:19,431 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-03 12:46:19,701 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 235 ms. Found 2 JPA repository interfaces.
-2023-01-03 12:46:20,997 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
-2023-01-03 12:46:23,606 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
-2023-01-03 12:46:23,664 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2023-01-03 12:46:23,665 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-01-03 12:46:24,727 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
-2023-01-03 12:46:24,733 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8663 ms
-2023-01-03 12:46:27,282 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2023-01-03 12:46:28,341 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2023-01-03 12:46:32,726 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-03 12:46:34,080 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
-2023-01-03 12:46:35,259 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4fea095b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@354e2bff, org.springframework.security.web.context.SecurityContextPersistenceFilter@627d5f1, org.springframework.security.web.header.HeaderWriterFilter@fe09374, org.springframework.security.web.authentication.logout.LogoutFilter@682fe17b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@208185c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1831447c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@232b3b4c, org.springframework.security.web.session.SessionManagementFilter@13866865, org.springframework.security.web.access.ExceptionTranslationFilter@7fce1069, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3462e99a]
-2023-01-03 12:46:41,108 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-03 12:46:41,398 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 28.235 seconds (JVM running for 31.348)
-2023-01-03 12:47:32,776 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-03 12:47:33,206 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-03 12:47:33,211 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-03 12:52:33,805 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-03 12:52:33,813 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-03 12:52:47,693 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
-2023-01-03 12:52:47,788 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
-2023-01-03 12:52:50,237 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-03 12:52:50,238 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-03 12:52:56,086 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 1
-2023-01-03 12:52:56,193 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 deleted
-2023-01-03 12:52:56,257 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-03 12:52:56,258 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-03 12:53:07,234 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-03 12:53:07,325 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2023-01-03 12:53:07,364 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-04 15:24:07,348 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 17936 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-04 15:24:07,363 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-04 15:24:09,207 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-04 15:24:09,345 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
+2023-01-04 15:24:09,964 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-04 15:24:11,055 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-04 15:24:11,081 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-04 15:24:11,081 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-04 15:24:11,428 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-04 15:24:11,428 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3973 ms
+2023-01-04 15:24:12,931 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-04 15:24:13,449 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-04 15:24:15,038 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-04 15:24:15,636 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-04 15:24:16,278 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58e7f930, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@406808eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7872e91f, org.springframework.security.web.header.HeaderWriterFilter@52c27d53, org.springframework.security.web.authentication.logout.LogoutFilter@1a4ae53d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@488279d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27575bcd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e93c46, org.springframework.security.web.session.SessionManagementFilter@5e02fb23, org.springframework.security.web.access.ExceptionTranslationFilter@64381526, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@627d5f99]
+2023-01-04 15:24:18,974 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-04 15:24:19,140 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 13.227 seconds (JVM running for 14.21)
+2023-01-04 15:25:32,145 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-04 15:25:32,308 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:25:32,308 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:26:20,079 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:26:20,084 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:26:39,070 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:26:39,070 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:26:46,067 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:26:46,067 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:26:53,065 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:26:53,065 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:26:59,060 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:26:59,065 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:27:04,067 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:27:04,073 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:27:08,062 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:27:08,067 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:32:34,915 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:32:34,920 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:47:02,918 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:47:02,918 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:47:10,940 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-04 15:47:10,972 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-04 15:47:13,161 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:47:13,161 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:47:19,932 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 1
+2023-01-04 15:47:20,012 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 deleted
+2023-01-04 15:47:20,049 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-04 15:47:20,052 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-04 15:59:12,985 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-04 15:59:12,985 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-04 15:59:13,001 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
