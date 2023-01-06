@@ -14,7 +14,7 @@ public class Validation {
     private static String validateField(String input, String field, List<String> nullFields) {
         var matched = input.matches(ALPHANUMERIC);
         if (nullFields.contains(field)) return "";
-        if (!matched || input.startsWith(" ")) return field + INVALID;
+        if (input.isBlank() || !matched || input.startsWith(" ")) return field + INVALID;
         return "";
     }
 
@@ -31,10 +31,10 @@ public class Validation {
     }
 
     public static String getErrors(Object o) throws IllegalAccessException {
-        var nullFields = Arrays.stream(o.getClass().getFields()).filter((prop) -> {
-            prop.setAccessible(true);
+        var nullFields = Arrays.stream(o.getClass().getDeclaredFields()).filter(field -> {
+            field.setAccessible(true);
             try {
-                if (prop.get(o) == null) return Boolean.parseBoolean(prop.getType().getSimpleName());
+                if (field.get(o) == null) return Boolean.parseBoolean(field.getType().getSimpleName());
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
             }

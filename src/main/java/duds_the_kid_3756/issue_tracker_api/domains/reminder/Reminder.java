@@ -12,13 +12,13 @@ public class Reminder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    public Long id;
 
-    private LocalTime time;
+    public LocalTime time;
 
-    private LocalDate date;
+    public LocalDate date;
 
-    private String alert;
+    public String alert;
 
     public Reminder() {
     }

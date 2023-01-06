@@ -12,23 +12,23 @@ public class Issue {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long id;
+    public Long id;
 
-    private String title;
+    public String title;
 
-    private String comment;
+    public String comment;
 
-    private String created;
+    public String created;
 
-    private String color = "#000000";
+    public String color = "#000000";
 
-    private boolean isCompleted = false;
+    public boolean isCompleted = false;
 
-    private boolean hasReminder = false;
+    public boolean hasReminder = false;
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "reminder_id", referencedColumnName = "id")
-    private Reminder reminder;
+    public Reminder reminder;
 
     public Issue() {
     }

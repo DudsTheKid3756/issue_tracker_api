@@ -1,49 +1,1222 @@
-2023-01-04 15:24:07,348 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 17936 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
-2023-01-04 15:24:07,363 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
-2023-01-04 15:24:09,207 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-01-04 15:24:09,345 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 JPA repository interfaces.
-2023-01-04 15:24:09,964 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
-2023-01-04 15:24:11,055 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
-2023-01-04 15:24:11,081 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
-2023-01-04 15:24:11,081 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
-2023-01-04 15:24:11,428 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
-2023-01-04 15:24:11,428 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3973 ms
-2023-01-04 15:24:12,931 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
-2023-01-04 15:24:13,449 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
-2023-01-04 15:24:15,038 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-01-04 15:24:15,636 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
-2023-01-04 15:24:16,278 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58e7f930, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@406808eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7872e91f, org.springframework.security.web.header.HeaderWriterFilter@52c27d53, org.springframework.security.web.authentication.logout.LogoutFilter@1a4ae53d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@488279d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27575bcd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e93c46, org.springframework.security.web.session.SessionManagementFilter@5e02fb23, org.springframework.security.web.access.ExceptionTranslationFilter@64381526, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@627d5f99]
-2023-01-04 15:24:18,974 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
-2023-01-04 15:24:19,140 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 13.227 seconds (JVM running for 14.21)
-2023-01-04 15:25:32,145 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2023-01-04 15:25:32,308 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:25:32,308 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:26:20,079 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:26:20,084 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:26:39,070 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:26:39,070 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:26:46,067 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:26:46,067 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:26:53,065 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:26:53,065 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:26:59,060 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:26:59,065 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:27:04,067 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:27:04,073 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:27:08,062 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:27:08,067 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:32:34,915 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:32:34,920 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:47:02,918 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:47:02,918 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:47:10,940 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
-2023-01-04 15:47:10,972 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
-2023-01-04 15:47:13,161 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:47:13,161 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:47:19,932 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 1
-2023-01-04 15:47:20,012 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 deleted
-2023-01-04 15:47:20,049 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
-2023-01-04 15:47:20,052 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
-2023-01-04 15:59:12,985 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-01-04 15:59:12,985 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
-2023-01-04 15:59:13,001 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 21:02:40,083 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 21856 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 21:02:40,102 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 21:02:41,227 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 21:02:41,301 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2023-01-05 21:02:41,597 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 21:02:42,178 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 21:02:42,199 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 21:02:42,199 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 21:02:42,387 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 21:02:42,388 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2213 ms
+2023-01-05 21:02:43,073 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 21:02:43,316 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 21:02:44,205 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 21:02:44,539 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 21:02:44,861 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5667dd90, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@261f5a45, org.springframework.security.web.context.SecurityContextPersistenceFilter@5862dda4, org.springframework.security.web.header.HeaderWriterFilter@7d2be319, org.springframework.security.web.authentication.logout.LogoutFilter@4504a4ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e02fb23, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@104392ba, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@76673ed, org.springframework.security.web.session.SessionManagementFilter@4edde05c, org.springframework.security.web.access.ExceptionTranslationFilter@29d563bd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7b6854b5]
+2023-01-05 21:02:46,176 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 21:02:46,284 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 6.973 seconds (JVM running for 7.668)
+2023-01-05 21:02:58,365 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 21:02:58,521 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:02:58,522 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:03:05,066 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 21:03:05,079 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 21:03:07,184 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:03:07,184 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:03:25,559 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:03:25,560 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:03:35,542 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 1
+2023-01-05 21:03:35,575 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 deleted
+2023-01-05 21:03:35,597 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:03:35,598 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:05:10,225 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:05:10,225 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:05:10,272 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:05:10,272 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:05:16,124 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 21:05:16,128 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 21:05:18,189 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:05:18,190 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:05:39,991 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:05:39,992 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:05:44,883 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 2
+2023-01-05 21:05:44,899 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 2 deleted
+2023-01-05 21:05:44,899 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:05:44,899 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:05:50,684 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 21:05:50,685 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 21:05:52,700 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:05:52,700 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:06:26,073 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 3
+2023-01-05 21:06:26,079 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 3 deleted
+2023-01-05 21:06:26,095 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:06:26,096 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:10:03,910 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 21:10:03,911 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 21:17:19,670 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 21:17:19,703 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 21:17:19,720 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 21:17:44,190 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 23620 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 21:17:44,194 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 21:17:45,720 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 21:17:45,792 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
+2023-01-05 21:17:46,103 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 21:17:46,658 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 21:17:46,673 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 21:17:46,673 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 21:17:46,856 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 21:17:46,856 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2577 ms
+2023-01-05 21:17:47,661 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 21:17:47,894 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 21:17:48,797 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 21:17:49,124 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 21:17:49,432 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@522fb69, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@593354fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@104392ba, org.springframework.security.web.header.HeaderWriterFilter@46290193, org.springframework.security.web.authentication.logout.LogoutFilter@558aa1f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1504b493, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19de32cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dfebd2a, org.springframework.security.web.session.SessionManagementFilter@70cac22a, org.springframework.security.web.access.ExceptionTranslationFilter@5759edff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58945295]
+2023-01-05 21:17:50,693 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 21:17:50,795 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 7.341 seconds (JVM running for 7.866)
+2023-01-05 21:18:07,523 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 21:18:13,237 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 21:18:13,252 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 21:19:21,711 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 21:19:21,711 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 21:19:38,776 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:19:38,776 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:19:44,466 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 1
+2023-01-05 21:19:44,479 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 deleted
+2023-01-05 21:19:44,509 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:19:44,509 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:19:48,533 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 2
+2023-01-05 21:19:48,534 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:19:48,534 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:19:48,538 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 2 deleted
+2023-01-05 21:19:48,544 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 21:19:48,544 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 21:36:36,747 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m18s699ms519µs700ns).
+2023-01-05 21:42:42,973 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m6s215ms989µs500ns).
+2023-01-05 21:57:32,747 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 21:57:32,810 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 21:57:32,841 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 21:58:08,952 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 27184 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 21:58:08,957 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 21:58:10,644 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 21:58:10,753 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2023-01-05 21:58:11,231 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 21:58:12,241 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 21:58:12,263 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 21:58:12,264 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 21:58:12,510 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 21:58:12,510 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3455 ms
+2023-01-05 21:58:13,501 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 21:58:13,873 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 21:58:15,216 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 21:58:15,841 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 21:58:16,267 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5daa621b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24a7725d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa334c, org.springframework.security.web.header.HeaderWriterFilter@22dc9d46, org.springframework.security.web.authentication.logout.LogoutFilter@3d1b43d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a85dc58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ee1b017, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fcedf83, org.springframework.security.web.session.SessionManagementFilter@58ca6ba3, org.springframework.security.web.access.ExceptionTranslationFilter@1b26fac2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67f0bf7e]
+2023-01-05 21:58:18,249 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 21:58:18,363 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 10.451 seconds (JVM running for 12.471)
+2023-01-05 21:58:26,767 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 21:58:26,770 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 21:58:26,777 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:04:36,316 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 864 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:04:36,322 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:04:37,998 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:04:38,108 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:04:38,608 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:04:39,485 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:04:39,504 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:04:39,504 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:04:39,778 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:04:39,778 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3353 ms
+2023-01-05 22:04:41,023 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:04:41,426 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:04:42,710 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:04:43,226 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:04:43,689 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6e1d9b32, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2db6ba81, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c8e4a82, org.springframework.security.web.header.HeaderWriterFilter@74797b90, org.springframework.security.web.authentication.logout.LogoutFilter@6dfebd2a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b6854b5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@357cdb00, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10728fe8, org.springframework.security.web.session.SessionManagementFilter@11a7840f, org.springframework.security.web.access.ExceptionTranslationFilter@167bb934, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@51aaa9d4]
+2023-01-05 22:04:45,730 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:04:45,859 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 10.675 seconds (JVM running for 11.889)
+2023-01-05 22:05:03,199 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:05:03,363 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:12:14,923 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m22s676ms785µs800ns).
+2023-01-05 22:12:15,231 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:12:16,148 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:12:16,167 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:12:16,184 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:12:24,360 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 25688 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:12:24,364 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:12:25,960 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:12:26,063 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:12:26,534 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:12:27,503 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:12:27,522 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:12:27,523 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:12:27,791 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:12:27,791 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3338 ms
+2023-01-05 22:12:28,815 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:12:29,121 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:12:30,452 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:12:30,999 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:12:31,464 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1055d261, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d758472, org.springframework.security.web.context.SecurityContextPersistenceFilter@11a7840f, org.springframework.security.web.header.HeaderWriterFilter@167bb934, org.springframework.security.web.authentication.logout.LogoutFilter@5667dd90, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@52fec840, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7fd4b9ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7615666e, org.springframework.security.web.session.SessionManagementFilter@698e1bf5, org.springframework.security.web.access.ExceptionTranslationFilter@6edb2c7b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ed87ccf]
+2023-01-05 22:12:33,450 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:12:33,571 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 10.343 seconds (JVM running for 11.447)
+2023-01-05 22:12:37,742 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:12:37,966 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:13:49,389 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m20s151ms735µs100ns).
+2023-01-05 22:13:49,482 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:13:49,920 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:13:49,924 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:13:49,940 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:13:54,838 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28040 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:13:54,844 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:13:56,370 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:13:56,484 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:13:56,960 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:13:57,809 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:13:57,827 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:13:57,828 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:13:58,098 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:13:58,099 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3158 ms
+2023-01-05 22:13:59,170 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:13:59,519 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:14:00,825 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:14:01,349 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:14:01,797 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24a7725d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fcedf83, org.springframework.security.web.context.SecurityContextPersistenceFilter@17f8cad6, org.springframework.security.web.header.HeaderWriterFilter@63c6c5e5, org.springframework.security.web.authentication.logout.LogoutFilter@9f52eb7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ee1b017, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7f9e6167, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16c9f7f0, org.springframework.security.web.session.SessionManagementFilter@74797b90, org.springframework.security.web.access.ExceptionTranslationFilter@54a033b8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e88e14]
+2023-01-05 22:14:03,853 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:14:03,983 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 10.135 seconds (JVM running for 11.306)
+2023-01-05 22:14:09,256 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:14:09,418 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:14:48,245 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48s617ms126µs200ns).
+2023-01-05 22:17:28,771 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:17:29,317 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:17:29,323 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:17:29,338 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:25:00,606 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 26992 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:25:00,611 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:25:02,176 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:25:02,282 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:25:02,746 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:25:03,688 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:25:03,708 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:25:03,709 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:25:03,966 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:25:03,966 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3251 ms
+2023-01-05 22:25:04,937 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:25:05,249 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:25:06,495 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:25:07,020 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:25:07,466 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33e6bd36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e1d9b32, org.springframework.security.web.context.SecurityContextPersistenceFilter@10553a61, org.springframework.security.web.header.HeaderWriterFilter@58ca6ba3, org.springframework.security.web.authentication.logout.LogoutFilter@593354fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42d7e8bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b6854b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2db6ba81, org.springframework.security.web.session.SessionManagementFilter@32e5fb4c, org.springframework.security.web.access.ExceptionTranslationFilter@ea0c99c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3095d06b]
+2023-01-05 22:25:09,323 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:25:09,454 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 9.98 seconds (JVM running for 11.175)
+2023-01-05 22:25:15,425 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:25:15,622 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:26:06,340 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:26:06,775 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:26:06,782 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:26:06,794 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:39:08,679 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 26012 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:39:08,694 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:39:11,545 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:39:11,744 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:39:12,524 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:39:14,104 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:39:14,137 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:39:14,139 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:39:14,596 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:39:14,596 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5737 ms
+2023-01-05 22:39:16,650 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:39:17,367 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:39:19,568 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:39:20,351 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:39:21,048 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@ca0a21f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@768d27e8, org.springframework.security.web.context.SecurityContextPersistenceFilter@6839d03b, org.springframework.security.web.header.HeaderWriterFilter@2ee1b017, org.springframework.security.web.authentication.logout.LogoutFilter@32245b66, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@627d5f99, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44e3f3e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3dc39412, org.springframework.security.web.session.SessionManagementFilter@7b6854b5, org.springframework.security.web.access.ExceptionTranslationFilter@7910e307, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@198c0f1c]
+2023-01-05 22:39:24,315 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:39:24,515 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 17.769 seconds (JVM running for 19.856)
+2023-01-05 22:39:32,899 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:39:33,215 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:39:58,406 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:39:59,185 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:39:59,193 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:39:59,210 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:40:44,641 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28768 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:40:44,657 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:40:46,246 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:40:46,388 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:40:46,890 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:40:47,864 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:40:47,879 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:40:47,879 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:40:48,178 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:40:48,178 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3422 ms
+2023-01-05 22:40:49,214 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:40:49,576 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:40:50,881 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:40:51,415 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:40:51,918 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@406808eb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14e93c46, org.springframework.security.web.context.SecurityContextPersistenceFilter@10b2c1cf, org.springframework.security.web.header.HeaderWriterFilter@5ca7619f, org.springframework.security.web.authentication.logout.LogoutFilter@1368e2f7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27575bcd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@21ed4a51, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@89465d9, org.springframework.security.web.session.SessionManagementFilter@104392ba, org.springframework.security.web.access.ExceptionTranslationFilter@46290193, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@44e3f3e5]
+2023-01-05 22:40:54,243 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:40:54,432 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 10.897 seconds (JVM running for 11.838)
+2023-01-05 22:41:14,580 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:41:14,770 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:41:14,789 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:42:28,557 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:42:28,562 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:42:28,573 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:42:40,688 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 27812 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:42:40,696 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:42:43,970 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:42:44,153 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:42:44,951 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:42:46,401 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:42:46,428 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:42:46,430 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:42:46,990 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:42:46,990 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6096 ms
+2023-01-05 22:42:49,058 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:42:49,623 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:42:51,608 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:42:52,494 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:42:53,388 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@51aaa9d4, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6292c63e, org.springframework.security.web.context.SecurityContextPersistenceFilter@ea0c99c, org.springframework.security.web.header.HeaderWriterFilter@7c37ac3c, org.springframework.security.web.authentication.logout.LogoutFilter@6839d03b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b3ee43e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53da2aec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65bb4cb9, org.springframework.security.web.session.SessionManagementFilter@63c6c5e5, org.springframework.security.web.access.ExceptionTranslationFilter@6a7ea7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@66d6e50b]
+2023-01-05 22:42:57,547 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:42:57,787 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 18.926 seconds (JVM running for 20.815)
+2023-01-05 22:43:03,572 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:43:03,836 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:44:13,485 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:44:14,149 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:44:14,156 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:44:14,212 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:44:21,828 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 10716 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:44:21,838 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:44:24,601 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:44:24,784 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 151 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:44:25,571 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:44:27,024 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:44:27,054 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:44:27,055 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:44:27,472 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:44:27,473 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5483 ms
+2023-01-05 22:44:29,515 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:44:30,051 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:44:31,921 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:44:32,772 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:44:33,549 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d2950ed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3095d06b, org.springframework.security.web.context.SecurityContextPersistenceFilter@6369d01c, org.springframework.security.web.header.HeaderWriterFilter@62159fd, org.springframework.security.web.authentication.logout.LogoutFilter@58945295, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@167bb934, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3b3f62d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51aaa9d4, org.springframework.security.web.session.SessionManagementFilter@3f142e87, org.springframework.security.web.access.ExceptionTranslationFilter@3bf40c74, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5a24390b]
+2023-01-05 22:44:37,353 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:44:37,541 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 17.463 seconds (JVM running for 19.114)
+2023-01-05 22:45:01,022 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:45:01,272 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:45:34,328 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:45:34,694 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:45:34,707 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:45:34,744 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:47:34,773 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 27752 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:47:34,783 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:47:37,558 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:47:37,737 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:47:38,526 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:47:40,124 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:47:40,151 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:47:40,152 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:47:40,610 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:47:40,610 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5669 ms
+2023-01-05 22:47:42,674 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:47:43,371 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:47:45,366 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:47:46,299 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:47:47,033 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7fd32c56, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b04a6a4, org.springframework.security.web.context.SecurityContextPersistenceFilter@53da2aec, org.springframework.security.web.header.HeaderWriterFilter@58679ff, org.springframework.security.web.authentication.logout.LogoutFilter@44e3f3e5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@74797b90, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7676b2b9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3465edf9, org.springframework.security.web.session.SessionManagementFilter@6369d01c, org.springframework.security.web.access.ExceptionTranslationFilter@62159fd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@60d32006]
+2023-01-05 22:47:51,095 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:47:51,284 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 18.29 seconds (JVM running for 19.938)
+2023-01-05 22:48:57,738 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:48:58,018 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:49:51,724 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:49:52,050 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:49:52,063 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:49:52,116 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:51:08,243 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28168 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:51:08,255 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:51:11,014 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:51:11,200 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:51:11,994 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:51:13,552 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:51:13,583 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:51:13,584 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:51:14,013 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:51:14,014 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5604 ms
+2023-01-05 22:51:15,915 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:51:16,469 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:51:18,598 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:51:19,595 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:51:20,367 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33e6bd36, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e1d9b32, org.springframework.security.web.context.SecurityContextPersistenceFilter@10553a61, org.springframework.security.web.header.HeaderWriterFilter@58ca6ba3, org.springframework.security.web.authentication.logout.LogoutFilter@593354fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42d7e8bc, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7b6854b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2db6ba81, org.springframework.security.web.session.SessionManagementFilter@32e5fb4c, org.springframework.security.web.access.ExceptionTranslationFilter@ea0c99c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3095d06b]
+2023-01-05 22:51:24,667 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:51:24,883 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 18.475 seconds (JVM running for 20.214)
+2023-01-05 22:51:28,736 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:51:29,046 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:52:12,739 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s168ms929µs200ns).
+2023-01-05 22:52:14,608 ERROR [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"] with root cause
+java.lang.RuntimeException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl.addIssue(IssueServiceImpl.java:96)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController.addIssue(IssueController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-01-05 22:52:31,106 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:52:34,955 ERROR [http-nio-8080-exec-5] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"] with root cause
+java.lang.RuntimeException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl.addIssue(IssueServiceImpl.java:96)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController.addIssue(IssueController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-01-05 22:52:48,881 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:52:48,897 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 22:52:48,928 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 22:54:38,897 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 26168 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 22:54:38,905 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 22:54:41,593 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 22:54:41,782 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154 ms. Found 2 JPA repository interfaces.
+2023-01-05 22:54:42,371 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 22:54:43,384 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 22:54:43,405 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 22:54:43,406 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 22:54:43,717 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 22:54:43,717 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4697 ms
+2023-01-05 22:54:44,864 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 22:54:45,392 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 22:54:46,808 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 22:54:47,372 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 22:54:47,887 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58e7f930, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@406808eb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7872e91f, org.springframework.security.web.header.HeaderWriterFilter@52c27d53, org.springframework.security.web.authentication.logout.LogoutFilter@1a4ae53d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@488279d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27575bcd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e93c46, org.springframework.security.web.session.SessionManagementFilter@5e02fb23, org.springframework.security.web.access.ExceptionTranslationFilter@64381526, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@627d5f99]
+2023-01-05 22:54:50,231 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 22:54:50,422 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 13.191 seconds (JVM running for 14.386)
+2023-01-05 22:54:57,204 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 22:54:57,420 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:54:57,445 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 22:55:09,232 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 22:55:09,234 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 23:04:26,151 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:04:26,156 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:04:26,167 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:04:46,499 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 20408 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:04:46,507 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:04:48,220 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:04:48,349 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:04:48,876 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:04:49,972 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:04:49,994 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:04:49,995 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:04:50,297 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:04:50,297 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3665 ms
+2023-01-05 23:04:51,382 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:04:51,736 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:04:53,150 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:04:53,691 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:04:54,155 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69ed96e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61648dd2, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ad7a305, org.springframework.security.web.header.HeaderWriterFilter@5eb041b5, org.springframework.security.web.authentication.logout.LogoutFilter@627d5f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5da2966, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52c27d53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ac326c0, org.springframework.security.web.session.SessionManagementFilter@5703c1fb, org.springframework.security.web.access.ExceptionTranslationFilter@7c39193f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a85dc58]
+2023-01-05 23:04:56,431 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:04:56,610 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 11.33 seconds (JVM running for 12.308)
+2023-01-05 23:05:07,296 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:05:07,550 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:05:07,578 ERROR [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"] with root cause
+java.lang.RuntimeException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl.addIssue(IssueServiceImpl.java:96)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController.addIssue(IssueController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-01-05 23:09:09,205 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28716 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:09:09,214 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:09:11,972 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:09:12,175 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:09:13,014 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:09:14,532 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:09:14,564 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:09:14,565 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:09:15,011 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:09:15,011 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5620 ms
+2023-01-05 23:09:17,270 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:09:17,822 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:09:19,832 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:09:20,675 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:09:21,422 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@187df588, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d75940, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ee1b017, org.springframework.security.web.header.HeaderWriterFilter@36d5c2ce, org.springframework.security.web.authentication.logout.LogoutFilter@5300694d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32e5fb4c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@11a7840f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3e5cbcfe, org.springframework.security.web.session.SessionManagementFilter@7910e307, org.springframework.security.web.access.ExceptionTranslationFilter@6afced93, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25c4f621]
+2023-01-05 23:09:24,973 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-01-05 23:09:24,988 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:09:24,993 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:09:25,008 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:09:25,017 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2023-01-05 23:09:25,049 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-05 23:09:25,108 ERROR [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-01-05 23:09:55,234 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:09:55,239 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:09:55,259 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:10:05,078 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 27992 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:10:05,089 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:10:07,780 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:10:07,964 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:10:08,710 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:10:10,288 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:10:10,317 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:10:10,318 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:10:10,750 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:10:10,751 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5512 ms
+2023-01-05 23:10:12,827 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:10:13,310 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:10:15,160 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:10:15,938 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:10:16,635 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5daa621b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24a7725d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa334c, org.springframework.security.web.header.HeaderWriterFilter@22dc9d46, org.springframework.security.web.authentication.logout.LogoutFilter@3d1b43d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a85dc58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ee1b017, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fcedf83, org.springframework.security.web.session.SessionManagementFilter@58ca6ba3, org.springframework.security.web.access.ExceptionTranslationFilter@1b26fac2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67f0bf7e]
+2023-01-05 23:10:20,362 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:10:20,632 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 17.311 seconds (JVM running for 18.955)
+2023-01-05 23:10:26,990 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:10:27,268 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:11:30,827 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s410ms374µs400ns).
+2023-01-05 23:12:28,897 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s70ms742µs100ns).
+2023-01-05 23:12:28,933 ERROR [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.lang.IllegalAccessException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"] with root cause
+java.lang.IllegalAccessException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:420)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709)
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1140)
+	at java.base/java.lang.reflect.Field.get(Field.java:425)
+	at duds_the_kid_3756.issue_tracker_api.helpers.Validation.getErrors(Validation.java:38)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl.addIssue(IssueServiceImpl.java:94)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController.addIssue(IssueController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-01-05 23:12:29,072 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:12:29,079 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:12:29,106 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:14:34,529 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 22672 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:14:34,537 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:14:37,363 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:14:37,558 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 158 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:14:38,317 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:14:39,731 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:14:39,756 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:14:39,758 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:14:40,160 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:14:40,160 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5450 ms
+2023-01-05 23:14:42,146 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:14:42,674 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:14:44,608 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:14:45,473 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:14:46,230 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5daa621b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24a7725d, org.springframework.security.web.context.SecurityContextPersistenceFilter@5aa334c, org.springframework.security.web.header.HeaderWriterFilter@22dc9d46, org.springframework.security.web.authentication.logout.LogoutFilter@3d1b43d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a85dc58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ee1b017, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4fcedf83, org.springframework.security.web.session.SessionManagementFilter@58ca6ba3, org.springframework.security.web.access.ExceptionTranslationFilter@1b26fac2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@67f0bf7e]
+2023-01-05 23:14:50,218 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:14:50,471 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 17.698 seconds (JVM running for 19.483)
+2023-01-05 23:15:32,300 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:15:32,569 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:17:30,208 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m46s982ms920µs600ns).
+2023-01-05 23:17:30,253 ERROR [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: java.lang.IllegalAccessException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"] with root cause
+java.lang.IllegalAccessException: class duds_the_kid_3756.issue_tracker_api.helpers.Validation cannot access a member of class duds_the_kid_3756.issue_tracker_api.domains.issue.Issue with modifiers "private"
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:420)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:709)
+	at java.base/java.lang.reflect.Field.checkAccess(Field.java:1140)
+	at java.base/java.lang.reflect.Field.get(Field.java:425)
+	at duds_the_kid_3756.issue_tracker_api.helpers.Validation.getErrors(Validation.java:38)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl.addIssue(IssueServiceImpl.java:94)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController.addIssue(IssueController.java:41)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-01-05 23:17:30,390 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:17:30,398 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:17:30,413 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:17:40,644 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 26616 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:17:40,653 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:17:43,526 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:17:43,704 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:17:44,534 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:17:45,961 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:17:45,987 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:17:45,989 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:17:46,421 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:17:46,422 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5596 ms
+2023-01-05 23:17:48,298 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:17:48,765 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:17:50,900 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:17:51,861 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:17:52,674 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6773bab2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1055d261, org.springframework.security.web.context.SecurityContextPersistenceFilter@32e5fb4c, org.springframework.security.web.header.HeaderWriterFilter@ea0c99c, org.springframework.security.web.authentication.logout.LogoutFilter@67d8613, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4f5c757c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52fec840, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d758472, org.springframework.security.web.session.SessionManagementFilter@17f8cad6, org.springframework.security.web.access.ExceptionTranslationFilter@63c6c5e5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c2fea95]
+2023-01-05 23:17:56,462 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:17:56,695 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 17.73 seconds (JVM running for 19.397)
+2023-01-05 23:18:01,760 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:18:02,074 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:18:40,140 WARN  [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s262ms231µs500ns).
+2023-01-05 23:18:53,006 ERROR [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : String field is invalidString field is invalidid field cannot be null. 
+2023-01-05 23:22:48,394 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28680 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:22:48,399 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:22:50,187 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:22:50,319 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:22:50,863 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:22:51,897 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:22:51,919 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:22:51,920 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:22:52,216 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:22:52,216 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3709 ms
+2023-01-05 23:22:53,360 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:22:53,698 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:22:55,103 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:22:55,648 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:22:56,145 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ac326c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e5d40ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@bf18412, org.springframework.security.web.header.HeaderWriterFilter@4a3333be, org.springframework.security.web.authentication.logout.LogoutFilter@af94b0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ca7619f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b71af0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b028f58, org.springframework.security.web.session.SessionManagementFilter@35d3202b, org.springframework.security.web.access.ExceptionTranslationFilter@6e225c34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f9e6167]
+2023-01-05 23:22:58,461 WARN  [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2023-01-05 23:22:58,469 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:22:58,473 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:22:58,491 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:22:58,496 INFO  [main] org.apache.catalina.core.StandardService : Stopping service [Tomcat]
+2023-01-05 23:22:58,530 INFO  [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-05 23:22:58,568 ERROR [main] org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-01-05 23:23:07,744 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:23:07,775 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:23:07,806 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:23:46,826 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28876 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:23:46,832 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:23:48,539 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:23:48,655 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:23:49,153 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:23:50,055 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:23:50,075 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:23:50,076 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:23:50,365 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:23:50,365 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3438 ms
+2023-01-05 23:23:51,415 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:23:51,730 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:23:53,023 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:23:53,545 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:23:54,045 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@69ed96e1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61648dd2, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ad7a305, org.springframework.security.web.header.HeaderWriterFilter@5eb041b5, org.springframework.security.web.authentication.logout.LogoutFilter@627d5f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5da2966, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@52c27d53, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ac326c0, org.springframework.security.web.session.SessionManagementFilter@5703c1fb, org.springframework.security.web.access.ExceptionTranslationFilter@7c39193f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7a85dc58]
+2023-01-05 23:23:56,360 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:23:56,529 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 10.922 seconds (JVM running for 11.863)
+2023-01-05 23:24:11,331 INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:24:11,523 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:24:11,532 ERROR [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : String field is invalidString field is invalid
+2023-01-05 23:24:25,779 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:24:25,779 ERROR [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : String field is invalidString field is invalid
+2023-01-05 23:25:42,138 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:25:42,140 ERROR [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : String field is invalidString field is invalid
+2023-01-05 23:25:49,698 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:25:49,698 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:25:49,729 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:26:14,708 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 28736 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:26:14,708 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:26:16,263 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:26:16,385 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 106 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:26:16,887 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:26:17,814 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:26:17,829 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:26:17,829 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:26:18,159 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:26:18,159 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3348 ms
+2023-01-05 23:26:19,244 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:26:19,685 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:26:21,039 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:26:21,605 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:26:22,093 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@522fb69, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@593354fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@104392ba, org.springframework.security.web.header.HeaderWriterFilter@46290193, org.springframework.security.web.authentication.logout.LogoutFilter@558aa1f1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1504b493, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19de32cb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dfebd2a, org.springframework.security.web.session.SessionManagementFilter@70cac22a, org.springframework.security.web.access.ExceptionTranslationFilter@5759edff, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58945295]
+2023-01-05 23:26:24,340 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:26:24,529 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 11.064 seconds (JVM running for 11.925)
+2023-01-05 23:26:31,636 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:26:31,845 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:26:31,853 ERROR [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : String field is invalid. String field is invalid. 
+2023-01-05 23:27:15,007 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:27:15,007 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:27:21,972 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:27:21,972 ERROR [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : String field is invalid. String field is invalid. 
+2023-01-05 23:27:46,353 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:27:46,369 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 23:27:48,531 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:27:48,536 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:28:08,954 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for updateIssue 1
+2023-01-05 23:28:08,994 ERROR [http-nio-8080-exec-10] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException: Cannot invoke "duds_the_kid_3756.issue_tracker_api.domains.reminder.Reminder.getId()" because the return value of "duds_the_kid_3756.issue_tracker_api.domains.issue.Issue.getReminder()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "duds_the_kid_3756.issue_tracker_api.domains.reminder.Reminder.getId()" because the return value of "duds_the_kid_3756.issue_tracker_api.domains.issue.Issue.getReminder()" is null
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl.updateIssue(IssueServiceImpl.java:179)
+	at duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController.updateIssue(IssueController.java:47)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:920)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:699)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-01-05 23:34:30,611 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:34:30,688 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:34:30,771 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.
+2023-01-05 23:34:54,177 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Starting IssueTrackerApplication using Java 19 on --DWMA-- with PID 25228 (C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api\target\classes started by duds_the_kid_3756 in C:\Users\duds_the_kid_3756\Desktop\Code\issue_tracker_api)
+2023-01-05 23:34:54,184 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-05 23:34:56,018 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-05 23:34:56,150 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 2 JPA repository interfaces.
+2023-01-05 23:34:56,688 INFO  [main] org.springframework.cloud.context.scope.GenericScope : BeanFactory id=45b72e9f-17cb-31fe-8042-4e61466d1b0b
+2023-01-05 23:34:57,676 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 8080 (http)
+2023-01-05 23:34:57,700 INFO  [main] org.apache.catalina.core.StandardService : Starting service [Tomcat]
+2023-01-05 23:34:57,701 INFO  [main] org.apache.catalina.core.StandardEngine : Starting Servlet engine: [Apache Tomcat/9.0.68]
+2023-01-05 23:34:58,009 INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring embedded WebApplicationContext
+2023-01-05 23:34:58,009 INFO  [main] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3725 ms
+2023-01-05 23:34:59,191 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-01-05 23:34:59,571 INFO  [main] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-01-05 23:35:01,018 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:35:01,603 WARN  [main] org.springframework.security.core.userdetails.User : User.withDefaultPasswordEncoder() is considered unsafe for production and is only intended for sample applications.
+2023-01-05 23:35:02,108 INFO  [main] org.springframework.security.web.DefaultSecurityFilterChain : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ac326c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e5d40ec, org.springframework.security.web.context.SecurityContextPersistenceFilter@bf18412, org.springframework.security.web.header.HeaderWriterFilter@4a3333be, org.springframework.security.web.authentication.logout.LogoutFilter@af94b0b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5ca7619f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b71af0d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5b028f58, org.springframework.security.web.session.SessionManagementFilter@35d3202b, org.springframework.security.web.access.ExceptionTranslationFilter@6e225c34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f9e6167]
+2023-01-05 23:35:04,419 INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-05 23:35:04,585 INFO  [main] duds_the_kid_3756.issue_tracker_api.IssueTrackerApplication : Started IssueTrackerApplication in 11.716 seconds (JVM running for 12.807)
+2023-01-05 23:36:26,790 INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-05 23:36:26,906 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:36:26,918 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:36:49,366 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:36:49,382 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue was added without set Reminder as 'hasReminder' was left 'false'. Update Issue to add Reminder
+2023-01-05 23:36:51,566 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:36:51,566 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:37:06,230 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for updateIssue 1
+2023-01-05 23:37:06,251 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 updated. 
+2023-01-05 23:37:08,403 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:37:08,403 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:38:06,152 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for updateIssue 1
+2023-01-05 23:38:06,152 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:38:06,161 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:38:06,162 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 updated. 'hasReminder' field was false. Reminder was set to null
+2023-01-05 23:38:24,922 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:38:24,922 INFO  [http-nio-8080-exec-3] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:39:21,960 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:39:21,960 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:40:12,929 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for addIssue
+2023-01-05 23:40:12,929 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : New issue added
+2023-01-05 23:40:15,021 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:40:15,021 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:41:05,912 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:41:05,921 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:41:05,937 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for updateIssue 2
+2023-01-05 23:41:05,945 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 2 updated. 'hasReminder' field was false. Reminder was set to null
+2023-01-05 23:41:36,236 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:41:36,236 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:42:45,960 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:42:45,960 INFO  [http-nio-8080-exec-7] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:42:48,940 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:42:48,940 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:42:56,953 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:42:56,953 INFO  [http-nio-8080-exec-10] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:43:00,940 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:43:00,940 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:43:07,941 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:43:07,941 INFO  [http-nio-8080-exec-4] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:43:23,888 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for updateIssue 1
+2023-01-05 23:43:23,896 INFO  [http-nio-8080-exec-5] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 updated. 
+2023-01-05 23:43:25,979 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:43:25,979 INFO  [http-nio-8080-exec-6] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:44:02,297 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for updateIssue 1
+2023-01-05 23:44:02,305 INFO  [http-nio-8080-exec-8] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 1 updated. 'hasReminder' field was false. Reminder was set to null
+2023-01-05 23:44:03,304 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:44:03,306 INFO  [http-nio-8080-exec-9] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:44:28,016 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for deleteIssue 2
+2023-01-05 23:44:28,032 INFO  [http-nio-8080-exec-2] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Issue with id 2 deleted
+2023-01-05 23:44:28,071 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueController : Request received for getIssues
+2023-01-05 23:44:28,071 INFO  [http-nio-8080-exec-1] duds_the_kid_3756.issue_tracker_api.domains.issue.IssueServiceImpl : Got all issues
+2023-01-05 23:47:12,046 INFO  [SpringApplicationShutdownHook] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-05 23:47:12,061 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-01-05 23:47:12,093 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.

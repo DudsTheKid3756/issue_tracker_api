@@ -93,7 +93,7 @@ public class IssueServiceImpl implements IssueService {
         try {
             errors += Validation.getErrors(issue);
         } catch (IllegalAccessException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new RuntimeException(e);
         }
 
         issue.setColor(String.format("#%s", issue.getColor()));
@@ -175,7 +175,7 @@ public class IssueServiceImpl implements IssueService {
         }
 
         issue.setReminder(issue.isHasReminder() ? reminder : null);
-        if (issue.getReminder() != null) {
+        if (issue.getReminder() != null && existingIssue.getReminder() != null) {
             issue.getReminder().setId(existingIssue.getReminder().getId());
         }
 

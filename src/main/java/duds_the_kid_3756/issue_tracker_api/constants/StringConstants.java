@@ -1,12 +1,5 @@
 package duds_the_kid_3756.issue_tracker_api.constants;
 
-import duds_the_kid_3756.issue_tracker_api.domains.issue.Issue;
-import duds_the_kid_3756.issue_tracker_api.domains.reminder.Reminder;
-
-import java.sql.Time;
-import java.sql.Date;
-import java.util.List;
-
 public class StringConstants {
     public static final String NOT_FOUND = "404 Not Found";
     public static final String SERVER_ERROR = "500 An unexpected error occurred";
@@ -17,7 +10,7 @@ public class StringConstants {
 
     public static final String NULL = " field cannot be null. ";
 
-    public static final String INVALID = " field is invalid";
+    public static final String INVALID = " field is invalid. ";
 
     public static final String PLACEHOLDER = "Placeholder";
 }
