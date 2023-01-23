@@ -44,7 +44,7 @@ public class AuthServiceImpl implements AuthService {
             throw new Invalid(INVALID_EMAIL_PASSWORD);
         }
 
-        String passwordOnFile = user.getPassword();
+        String passwordOnFile = bCryptPasswordEncoder.encode(user.getPassword());
 
         if (!bCryptPasswordEncoder.matches(password, passwordOnFile)) {
             throw new Invalid(INVALID_EMAIL_PASSWORD);

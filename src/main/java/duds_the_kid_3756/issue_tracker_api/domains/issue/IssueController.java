@@ -15,10 +15,10 @@ import static duds_the_kid_3756.issue_tracker_api.constants.Paths.BASE_PATH;
 @RequestMapping(value = BASE_PATH)
 public class IssueController {
 
-    private final Logger logger = LogManager.getLogger(IssueController.class);
-    @Autowired
     private final IssueService issueService;
+    private final Logger logger = LogManager.getLogger(IssueController.class);
 
+    @Autowired
     public IssueController(IssueService issueService) {
         this.issueService = issueService;
     }

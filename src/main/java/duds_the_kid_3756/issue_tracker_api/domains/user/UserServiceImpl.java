@@ -1,5 +1,6 @@
 package duds_the_kid_3756.issue_tracker_api.domains.user;
 
+import duds_the_kid_3756.issue_tracker_api.exceptions.ServerError;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +18,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public User createUser(User user) {
 
-        User postedUser = null;
+        User postedUser;
 
         try {
             postedUser = userRepository.save(user);
         } catch (DataAccessException dae) {
             logger.error(dae.getMessage());
+            throw new ServerError(dae.getMessage());
         }
 
+        logger.info("User created");
         return postedUser;
     }
 
@@ -39,6 +42,7 @@ public class UserServiceImpl implements UserService {
             logger.error(dae.getMessage());
         }
 
+        logger.info("User found with email address: " + email);
         return foundUser;
     }
 }

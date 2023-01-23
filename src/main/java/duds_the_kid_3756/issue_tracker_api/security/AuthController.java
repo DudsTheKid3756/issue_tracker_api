@@ -20,7 +20,7 @@ public class AuthController {
     }
 
     @PostMapping
-    AuthToken login(@Valid @RequestBody Credential credentials) {
+    public AuthToken login(@Valid @RequestBody Credential credentials) {
         return authService.login(credentials);
     }
 }
