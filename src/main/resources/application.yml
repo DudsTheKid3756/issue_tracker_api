@@ -16,7 +16,12 @@ spring:
     jpa:
         open-in-view: true
         hibernate:
-            ddl-auto: create
+            ddl-auto: update
         show-sql: true
         database: postgresql
         database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+duds_the_kid_3756:
+    app:
+        jwtSecret: dudsTheKidSecretKey
+        jwtExpirationMs: 86400000

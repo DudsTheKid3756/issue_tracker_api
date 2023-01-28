@@ -1,5 +1,7 @@
 package duds_the_kid_3756.issue_tracker_api.helpers;
 
+import org.springframework.util.StringUtils;
+
 import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +25,9 @@ public class Validation {
         for (Field field : o.getClass().getFields()) {
             field.setAccessible(true);
             if (field.getType().getSimpleName().equals("String") && field.get(o) != null) {
-                errors.append(validateField(field.get(o).toString(), field.getType().getSimpleName(), nullFields));
+                errors.append(
+                        validateField(
+                                field.get(o).toString(), StringUtils.capitalize(field.getName()), nullFields));
             }
         }
 

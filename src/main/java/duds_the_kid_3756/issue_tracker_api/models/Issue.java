@@ -1,6 +1,4 @@
-package duds_the_kid_3756.issue_tracker_api.domains.issue;
-
-import duds_the_kid_3756.issue_tracker_api.domains.reminder.Reminder;
+package duds_the_kid_3756.issue_tracker_api.models;
 
 import javax.persistence.*;
 import java.util.Objects;

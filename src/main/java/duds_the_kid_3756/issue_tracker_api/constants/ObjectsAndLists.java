@@ -1,6 +1,6 @@
 package duds_the_kid_3756.issue_tracker_api.constants;
 
-import duds_the_kid_3756.issue_tracker_api.domains.reminder.Reminder;
+import duds_the_kid_3756.issue_tracker_api.models.Reminder;
 
 import java.sql.Date;
 import java.sql.Time;

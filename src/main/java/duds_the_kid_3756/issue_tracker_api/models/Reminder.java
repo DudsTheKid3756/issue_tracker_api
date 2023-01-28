@@ -1,4 +1,4 @@
-package duds_the_kid_3756.issue_tracker_api.domains.reminder;
+package duds_the_kid_3756.issue_tracker_api.models;
 
 import javax.persistence.*;
 import java.time.LocalDate;

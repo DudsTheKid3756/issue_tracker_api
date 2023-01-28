@@ -1,4 +1,6 @@
-package duds_the_kid_3756.issue_tracker_api.domains.issue;
+package duds_the_kid_3756.issue_tracker_api.services;
+
+import duds_the_kid_3756.issue_tracker_api.models.Issue;
 
 import java.util.List;
 
