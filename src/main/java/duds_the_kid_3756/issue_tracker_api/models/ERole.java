@@ -1,7 +1,5 @@
 package duds_the_kid_3756.issue_tracker_api.models;
 
 public enum ERole {
-    ROLE_USER,
-    ROLE_DEVELOPER,
-    ROLE_ADMIN
+    ROLE_USER
 }

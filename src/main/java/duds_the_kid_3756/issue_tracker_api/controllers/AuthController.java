@@ -30,7 +30,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static duds_the_kid_3756.issue_tracker_api.constants.Paths.*;
-import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.*;
+import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.ROLE_NOT_FOUND;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -107,27 +107,11 @@ public class AuthController {
             Role userRole = roleRepository.findByName(ERole.ROLE_USER)
                     .orElseThrow(() -> new RuntimeException(ROLE_NOT_FOUND));
             roles.add(userRole);
-        } else {
-            strRoles.forEach(role -> {
-                switch (role) {
-                    case ADMIN_ROLE_TYPE -> {
-                        Role adminRole = roleRepository.findByName(ERole.ROLE_ADMIN)
-                                .orElseThrow(() -> new RuntimeException(ROLE_NOT_FOUND));
-                        roles.add(adminRole);
-                    }
-                    case DEVELOPER_ROLE_TYPE -> {
-                        Role devRole = roleRepository.findByName(ERole.ROLE_DEVELOPER)
-                                .orElseThrow(() -> new RuntimeException(ROLE_NOT_FOUND));
-                        roles.add(devRole);
-                    }
-                    default -> {
-                        Role userRole = roleRepository.findByName(ERole.ROLE_USER)
-                                .orElseThrow(() -> new RuntimeException(ROLE_NOT_FOUND));
-                        roles.add(userRole);
-                    }
-                }
-            });
         }
+
+        Role userRole = roleRepository.findByName(ERole.ROLE_USER)
+                .orElseThrow(() -> new RuntimeException(ROLE_NOT_FOUND));
+        roles.add(userRole);
 
         user.setRoles(roles);
         userRepository.save(user);
