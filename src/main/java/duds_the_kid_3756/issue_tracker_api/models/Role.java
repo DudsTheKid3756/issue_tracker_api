@@ -1,7 +1,5 @@
 package duds_the_kid_3756.issue_tracker_api.models;
 
-import duds_the_kid_3756.issue_tracker_api.models.ERole;
-
 import javax.persistence.*;
 
 @Entity

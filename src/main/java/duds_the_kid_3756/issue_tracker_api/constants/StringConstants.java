@@ -12,6 +12,7 @@ public class StringConstants {
     public static final String ROLE_NOT_FOUND = "Error: Role is not found.";
 
     // Auth
+    public static final String ADMIN_ROLE_TYPE = "admin";
     public static final String UNAUTHORIZED = "Unauthorized";
     public static final String AUTHORIZATION_HEADER_NAME = "Authorization";
     public static final String TOKEN_PREFIX = "Bearer";
