@@ -6,4 +6,5 @@ public class Paths {
     public static final String AUTH_PATH = "/auth";
     public static final String SIGN_IN_PATH = "/signin";
     public static final String SIGN_UP_PATH = "/signup";
+    public static final String RESET_PATH = "/reset-pass";
 }

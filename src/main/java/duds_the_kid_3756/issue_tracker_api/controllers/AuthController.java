@@ -1,9 +1,13 @@
 package duds_the_kid_3756.issue_tracker_api.controllers;
 
+import duds_the_kid_3756.issue_tracker_api.exceptions.Invalid;
+import duds_the_kid_3756.issue_tracker_api.exceptions.ResourceNotFound;
+import duds_the_kid_3756.issue_tracker_api.exceptions.ServerError;
 import duds_the_kid_3756.issue_tracker_api.models.ERole;
 import duds_the_kid_3756.issue_tracker_api.models.Role;
 import duds_the_kid_3756.issue_tracker_api.models.User;
 import duds_the_kid_3756.issue_tracker_api.payload.request.LoginRequest;
+import duds_the_kid_3756.issue_tracker_api.payload.request.PassResetRequest;
 import duds_the_kid_3756.issue_tracker_api.payload.request.SignupRequest;
 import duds_the_kid_3756.issue_tracker_api.payload.response.JwtResponse;
 import duds_the_kid_3756.issue_tracker_api.payload.response.MessageResponse;
@@ -14,6 +18,7 @@ import duds_the_kid_3756.issue_tracker_api.security.services.UserDetailsImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,11 +31,13 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 import static duds_the_kid_3756.issue_tracker_api.constants.Paths.*;
-import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.*;
+import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.ADMIN_ROLE_TYPE;
+import static duds_the_kid_3756.issue_tracker_api.constants.StringConstants.ROLE_NOT_FOUND;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
@@ -126,6 +133,33 @@ public class AuthController {
 
         logger.info("User registered successfully!");
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
+    }
+
+    @PutMapping(RESET_PATH)
+    public ResponseEntity<?> resetPassword(@RequestBody PassResetRequest resetRequest) {
+        User existingUser;
+        try {
+            existingUser = userRepository.findByUsername(resetRequest.getUsername()).orElse(null);
+        } catch (DataAccessException dae) {
+            throw new ServerError(dae.getMessage());
+        }
+
+        if (existingUser == null) throw new ResourceNotFound(
+                "Error: User with username '" + resetRequest.getUsername() + "' not found");
+
+        String errors = "";
+        if (!Objects.equals(resetRequest.getCurrPassword(), existingUser.getPassword())) {
+            errors += "Current password is incorrect. ";
+        } else {
+            if (!Objects.equals(resetRequest.getNewPassword(), resetRequest.getRepeatPassword())) {
+                errors += "Passwords don't match. ";
+            }
+
+            if (!errors.isBlank()) throw new Invalid(errors);
+            existingUser.setPassword(resetRequest.getNewPassword());
+        }
+
+        return ResponseEntity.ok(new MessageResponse("Password successfully updated"));
     }
 }
 
