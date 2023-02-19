@@ -141,23 +141,31 @@ public class AuthController {
         try {
             existingUser = userRepository.findByUsername(resetRequest.getUsername()).orElse(null);
         } catch (DataAccessException dae) {
+            logger.error(dae.getMessage());
             throw new ServerError(dae.getMessage());
         }
 
-        if (existingUser == null) throw new ResourceNotFound(
-                "Error: User with username '" + resetRequest.getUsername() + "' not found");
+        if (existingUser == null) {
+            logger.error("Error: User with username '" + resetRequest.getUsername() + "' not found");
+            throw new ResourceNotFound("Error: User with username '" + resetRequest.getUsername() + "' not found");
+        }
 
         String errors = "";
-        if (!Objects.equals(resetRequest.getCurrPassword(), existingUser.getPassword())) {
+        if (!encoder.matches(resetRequest.getCurrPassword(), existingUser.getPassword())) {
             errors += "Current password is incorrect. ";
         } else {
             if (!Objects.equals(resetRequest.getNewPassword(), resetRequest.getRepeatPassword())) {
                 errors += "Passwords don't match. ";
             }
 
-            if (!errors.isBlank()) throw new Invalid(errors);
-            existingUser.setPassword(resetRequest.getNewPassword());
         }
+        if (!errors.isBlank()) throw new Invalid(errors);
+        logger.error(errors);
+
+        existingUser.setPassword(encoder.encode(resetRequest.getNewPassword()));
+
+        userRepository.save(existingUser);
+        logger.info("Password for user: " + existingUser.getUsername() + " updated!");
 
         return ResponseEntity.ok(new MessageResponse("Password successfully updated"));
     }
