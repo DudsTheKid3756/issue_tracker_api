@@ -150,17 +150,10 @@ public class AuthController {
             throw new ResourceNotFound("Error: User with username '" + resetRequest.getUsername() + "' not found");
         }
 
-        String errors = "";
-        if (!encoder.matches(resetRequest.getCurrPassword(), existingUser.getPassword())) {
-            errors += "Current password is incorrect. ";
-        } else {
-            if (!Objects.equals(resetRequest.getNewPassword(), resetRequest.getRepeatPassword())) {
-                errors += "Passwords don't match. ";
-            }
-
+        if (!Objects.equals(resetRequest.getNewPassword(), resetRequest.getRepeatPassword())) {
+            logger.error("Passwords don't match");
+            throw new Invalid("Passwords don't match");
         }
-        if (!errors.isBlank()) throw new Invalid(errors);
-        logger.error(errors);
 
         existingUser.setPassword(encoder.encode(resetRequest.getNewPassword()));
 
