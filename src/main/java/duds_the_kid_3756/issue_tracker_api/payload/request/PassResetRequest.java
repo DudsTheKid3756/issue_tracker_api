@@ -9,9 +9,6 @@ public class PassResetRequest {
     private String username;
 
     @NotBlank
-    private String currPassword;
-
-    @NotBlank
     @Size(min = 6, max = 40)
     private String newPassword;
 
@@ -25,14 +22,6 @@ public class PassResetRequest {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getCurrPassword() {
-        return currPassword;
-    }
-
-    public void setCurrPassword(String currPassword) {
-        this.currPassword = currPassword;
     }
 
     public String getNewPassword() {
