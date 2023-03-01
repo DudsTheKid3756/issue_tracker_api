@@ -12,6 +12,8 @@ public class Issue {
     @Column(name = "id")
     public Long id;
 
+    public String createdBy;
+
     public String title;
 
     public String comment;
@@ -31,8 +33,9 @@ public class Issue {
     public Issue() {
     }
 
-    public Issue(Long id, String title, String comment, String created, String color, boolean isCompleted, boolean hasReminder, Reminder reminder) {
+    public Issue(Long id, String createdBy, String title, String comment, String created, String color, boolean isCompleted, boolean hasReminder, Reminder reminder) {
         this.id = id;
+        this.createdBy = createdBy;
         this.title = title;
         this.comment = comment;
         this.created = created;
@@ -42,7 +45,8 @@ public class Issue {
         this.reminder = reminder;
     }
 
-    public Issue(String title, String comment, String created, String color, boolean isCompleted, boolean hasReminder, Reminder reminder) {
+    public Issue(String createdBy, String title, String comment, String created, String color, boolean isCompleted, boolean hasReminder, Reminder reminder) {
+        this.createdBy = createdBy;
         this.title = title;
         this.comment = comment;
         this.created = created;
@@ -58,6 +62,14 @@ public class Issue {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(String createdBy) {
+        this.createdBy = createdBy;
     }
 
     public String getTitle() {
@@ -120,18 +132,19 @@ public class Issue {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Issue issue)) return false;
-        return isCompleted == issue.isCompleted && isHasReminder() == issue.isHasReminder() && getId().equals(issue.getId()) && getTitle().equals(issue.getTitle()) && getComment().equals(issue.getComment()) && Objects.equals(getCreated(), issue.getCreated()) && Objects.equals(getColor(), issue.getColor()) && Objects.equals(getReminder(), issue.getReminder());
+        return isCompleted == issue.isCompleted && isHasReminder() == issue.isHasReminder() && getId().equals(issue.getId()) && getCreatedBy().equals(issue.getCreatedBy()) && getTitle().equals(issue.getTitle()) && getComment().equals(issue.getComment()) && Objects.equals(getCreated(), issue.getCreated()) && Objects.equals(getColor(), issue.getColor()) && Objects.equals(getReminder(), issue.getReminder());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getComment(), getCreated(), getColor(), isCompleted, isHasReminder(), getReminder());
+        return Objects.hash(getId(), getCreatedBy(), getTitle(), getComment(), getCreated(), getColor(), isCompleted, isHasReminder(), getReminder());
     }
 
     @Override
     public String toString() {
         return "Issue{" +
                 "id=" + id +
+                ", createdBy='" + createdBy + '\'' +
                 ", title='" + title + '\'' +
                 ", comment='" + comment + '\'' +
                 ", created='" + created + '\'' +

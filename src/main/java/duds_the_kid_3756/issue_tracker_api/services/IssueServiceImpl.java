@@ -5,7 +5,9 @@ import duds_the_kid_3756.issue_tracker_api.exceptions.ResourceNotFound;
 import duds_the_kid_3756.issue_tracker_api.exceptions.ServerError;
 import duds_the_kid_3756.issue_tracker_api.helpers.Validation;
 import duds_the_kid_3756.issue_tracker_api.models.Issue;
+import duds_the_kid_3756.issue_tracker_api.models.User;
 import duds_the_kid_3756.issue_tracker_api.repositories.IssueRepository;
+import duds_the_kid_3756.issue_tracker_api.repositories.UserRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +34,12 @@ public class IssueServiceImpl implements IssueService {
     @Autowired
     private final IssueRepository issueRepository;
 
-    public IssueServiceImpl(IssueRepository issueRepository) {
+    @Autowired
+    private final UserRepository userRepository;
+
+    public IssueServiceImpl(IssueRepository issueRepository, UserRepository userRepository) {
         this.issueRepository = issueRepository;
+        this.userRepository = userRepository;
     }
 
     @Override
@@ -68,6 +74,18 @@ public class IssueServiceImpl implements IssueService {
 
     @Override
     public Issue addIssue(Issue issue) {
+        User createdByUser;
+        try {
+            createdByUser = userRepository.findByUsername(issue.getCreatedBy()).orElse(null);
+        } catch (DataAccessException dae) {
+            logger.error(dae.getMessage());
+            throw new ServerError(dae.getMessage());
+        }
+
+        if (createdByUser == null)
+            throw new ResourceNotFound(
+                    String.format("User with username: '%s' does not exist", issue.createdBy));
+
         var reminder = issue.getReminder();
         issue.setCreated(PLACEHOLDER);
         var message = "";

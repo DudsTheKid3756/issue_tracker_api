@@ -29,35 +29,35 @@ public class IssueController {
     }
 
     @GetMapping
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<List<Issue>> getIssues() {
         logger.info("Request received for getIssues");
         return new ResponseEntity<>(issueService.getIssues(), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<Issue> getIssueById(@PathVariable Long id) {
         logger.info(String.format("Request received for getIssueById %s", id));
         return new ResponseEntity<>(issueService.getIssueById(id), HttpStatus.OK);
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<Issue> addIssue(@RequestBody Issue issue) {
         logger.info("Request received for addIssue");
         return new ResponseEntity<>(issueService.addIssue(issue), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<Issue> updateIssue(@RequestBody Issue issue, @PathVariable Long id) {
         logger.info(String.format("Request received for updateIssue %s", id));
         return new ResponseEntity<>(issueService.updateIssue(issue, id), HttpStatus.OK);
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('USER')")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<Issue> deleteIssue(@PathVariable Long id) {
         logger.info(String.format("Request received for deleteIssue %s", id));
         issueService.deleteIssue(id);
