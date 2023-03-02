@@ -54,6 +54,25 @@ public class IssueServiceImpl implements IssueService {
     }
 
     @Override
+    public List<Issue> getIssuesByUsername(String username) {
+        List<Issue> issuesWithUsername;
+
+        try {
+            issuesWithUsername = issueRepository.findByUsername(username);
+        } catch (DataAccessException dae) {
+            logger.error(dae.getMessage());
+            throw new ServerError(dae.getMessage());
+        }
+
+        if (issuesWithUsername.isEmpty()) {
+            logger.error(String.format("No issues found with username: '%s'", username));
+            throw new ResourceNotFound(String.format("No issues found with username: '%s'", username));
+        }
+
+        return issuesWithUsername;
+    }
+
+    @Override
     public Issue getIssueById(Long id) {
         Issue issue;
         try {

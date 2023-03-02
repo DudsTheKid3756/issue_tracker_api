@@ -35,6 +35,13 @@ public class IssueController {
         return new ResponseEntity<>(issueService.getIssues(), HttpStatus.OK);
     }
 
+    @GetMapping("/user/{username}")
+    @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
+    public ResponseEntity<List<Issue>> getIssuesByUsername(@PathVariable(value = "username") String username) {
+        logger.info(String.format("Request received for getIssueByUsername %s", username));
+        return new ResponseEntity<>(issueService.getIssuesByUsername(username), HttpStatus.OK);
+    }
+
     @GetMapping("/{id}")
     @PreAuthorize("hasAnyRole('USER', 'ADMIN')")
     public ResponseEntity<Issue> getIssueById(@PathVariable Long id) {

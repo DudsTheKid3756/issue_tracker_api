@@ -8,6 +8,8 @@ public interface IssueService {
 
     List<Issue> getIssues();
 
+    List<Issue> getIssuesByUsername(String username);
+
     Issue getIssueById(Long id);
 
     Issue addIssue(Issue issue);
