@@ -64,9 +64,11 @@ public class IssueServiceImpl implements IssueService {
             throw new ServerError(dae.getMessage());
         }
 
-        if (issuesWithUsername.isEmpty()) {
-            logger.error(String.format("No issues found with username: '%s'", username));
-            throw new ResourceNotFound(String.format("No issues found with username: '%s'", username));
+        var usernameExists = userRepository.existsByUsername(username);
+
+        if (!usernameExists) {
+            logger.error(String.format("User with username: '%s' does not exist", username));
+            throw new ResourceNotFound(String.format("User with username: '%s' does not exist", username));
         }
 
         return issuesWithUsername;
