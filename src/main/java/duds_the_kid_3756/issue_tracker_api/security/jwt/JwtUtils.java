@@ -32,7 +32,7 @@ public class JwtUtils {
                 .collect(Collectors.toSet());
         Map<String, Object> claims = new HashMap<>();
         claims.put("roles", roles);
-        
+
         return Jwts.builder()
                 .setClaims(claims)
                 .setSubject((userPrincipal.getUsername()))
