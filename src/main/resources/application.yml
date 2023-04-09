@@ -1,21 +1,22 @@
 logging:
-    file.name: logs/Logs.log
-    pattern:
-        console: "%d %-5level %logger : %msg%n"
-        file: "%d %-5level [%thread] %logger : %msg%n"
-    level:
-        org.springframework.web: ERROR
-        org.hibernate: ERROR
+  file.name: logs/Logs.log
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    org.springframework.web: ERROR
+    org.hibernate: ERROR
 spring:
-    jpa:
-        hibernate:
-            ddl-auto: update
-        database-platform: duds_the_kid_3756.issue_tracker_api.SQLDialect
-    datasource:
-        url: jdbc:sqlite:sqliteissuetracker.db
-        driver-class-name: org.sqlite.JDBC
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    database-platform: duds_the_kid_3756.issue_tracker_api.SQLDialect
+  datasource:
+    url: jdbc:sqlite:sqliteissuetracker.db
+    driver-class-name: org.sqlite.JDBC
 
 duds_the_kid_3756:
-    app:
-        jwtSecret: dudsTheKidSecretKey
-        jwtExpirationMs: 86400000
+  app:
+    jwtSecret: dudsTheKidSecretKey
+    jwtExpirationMs: 86400000
